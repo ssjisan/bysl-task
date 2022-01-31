@@ -1,11 +1,13 @@
-import { Box } from '@mui/material';
-import Navbar from './Components/Navbar/Navbar';
-
+import { Box, ThemeProvider } from "@mui/material";
+import Navbar from "./Components/Navbar/Navbar";
+import theme from "./theme";
 function App() {
   return (
-    <Box>
-      <Navbar/>
-    </Box>
+    <ThemeProvider theme={theme}>
+      <Box>
+        <Navbar />
+      </Box>
+    </ThemeProvider>
   );
 }
 

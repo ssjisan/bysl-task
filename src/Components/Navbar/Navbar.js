@@ -4,11 +4,9 @@ import {
   Button,
   Container,
   Grid,
-  Toolbar,
   Typography,
 } from "@mui/material";
 import React from "react";
-
 export default function Navbar() {
   return (
     <Box>
@@ -24,7 +22,7 @@ export default function Navbar() {
               lg={4}
               style={{ display: "flex", justifyContent: "flex-start" }}
             >
-              <Typography>Intelli.</Typography>
+              <Typography style={{fontFamily:"Lekton", fontWeight:"bold"}} variant="h6">Intelli.</Typography>
             </Grid>
             <Grid item lg={4}>
               <Box style={{ display: "flex", flexDirection: "row" }}>

@@ -23,12 +23,18 @@ export default function Navbar() {
     <Box>
       <AppBar
         elevation={show ? 0 : 4}
-        style={{ backgroundColor: show ?"transparent":"white", color: "#444", transition:".5s ease"}}
+        style={{
+          backgroundColor: show ? "transparent" : "white",
+          color: "#444",
+          transition: ".5s ease",
+        }}
       >
         <Container style={{ padding: "1.5%" }}>
           <Grid container>
             <Grid
               item
+              sm={4}
+              md={4}
               lg={4}
               style={{ display: "flex", justifyContent: "flex-start" }}
             >
@@ -39,8 +45,8 @@ export default function Navbar() {
                 Intelli.
               </Typography>
             </Grid>
-            <Grid item lg={4}>
-              <Box style={{ display: "flex", flexDirection: "row" }}>
+            <Grid item sm={4} md={4} lg={4}>
+              <Box style={{ display: "flex", flexDirection: "row", justifyContent: "center" }}>
                 <Typography style={{ marginRight: "20px" }}>
                   Soluations
                 </Typography>{" "}
@@ -53,6 +59,8 @@ export default function Navbar() {
             </Grid>
             <Grid
               item
+              sm={4}
+              md={4}
               lg={4}
               style={{
                 display: "flex",

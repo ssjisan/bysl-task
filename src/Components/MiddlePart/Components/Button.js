@@ -7,15 +7,15 @@ export default function Button() {
     <Box>
       <Box style={{ display: "flex", alignItems: "center",marginBottom: "15px" }}>
         <IoIosArrowForward />
-        <Typography>Get Started</Typography>
+        <Typography  style={{fontFamily:"Poppins", fontWeight:500, fontSize:"20px"}}>Get Started</Typography>
       </Box>
       <Box style={{ display: "flex", alignItems: "center",marginBottom: "15px" }}>
         <IoIosArrowForward />
-        <Typography>Team on board</Typography>
+        <Typography style={{fontFamily:"Poppins", fontWeight:500, fontSize:"20px"}}>Team on board</Typography>
       </Box>
-      <Typography style={{ margin: "15px" }}>Case Study</Typography>
-      <Typography style={{ margin: "15px" }}>Use case</Typography>
-      <Typography style={{ margin: "15px" }}>Wow factor</Typography>
+      <Typography style={{ margin: "15px",fontFamily:"Poppins", fontWeight:500, fontSize:"20px",color:"#E9EBF6"}}>Case Study</Typography>
+      <Typography style={{ margin: "15px",fontFamily:"Poppins", fontWeight:500, fontSize:"20px",color:"#E9EBF6"}}>Use case</Typography>
+      <Typography style={{ margin: "15px",fontFamily:"Poppins", fontWeight:500, fontSize:"20px",color:"#E9EBF6"}}>Wow factor</Typography>
     </Box>
   );
 }

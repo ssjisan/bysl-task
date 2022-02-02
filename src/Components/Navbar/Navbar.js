@@ -29,7 +29,7 @@ export default function Navbar() {
           transition: ".5s ease",
         }}
       >
-        <Container style={{ padding: "1.5%" }}>
+        <Container style={{ padding:show? "1.5%": ".5%"}}>
           <Grid container>
             <Grid
               item

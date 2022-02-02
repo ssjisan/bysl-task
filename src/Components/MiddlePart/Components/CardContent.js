@@ -13,10 +13,10 @@ import data from "../../../Assets/fakeData.json";
 export default function CardContent() {
   const [userData, setUserData] = useState(data);
   return (
-    <Box>
+    <Box style={{marginLeft:"25px"}}>
       <Grid container spacing={2}>
         {userData.map((data) => (
-          <Grid item lg={4}>
+          <Grid item sm={6} md={4} lg={4}>
             <Card
               style={{
                 background: " #FFFFFF",
@@ -65,14 +65,14 @@ export default function CardContent() {
               </Box>
               <Box style={{ marginTop: "30px" }}>
                 <Grid container justifyContent="flex-end" alignItems="flex-end">
-                  <Grid item lg={6}>
+                  <Grid item xs={6} sm={6} md={6} lg={6}>
                     <Grid
                       container
                       justifyContent="center"
                       alignItems="center"
-                      spacing={2}
+                      spacing={3}
                     >
-                      <Grid item lg={4}>
+                      <Grid item xs={4} sm={4} md={4} lg={4}>
                         {" "}
                         <Box
                           style={{
@@ -115,7 +115,7 @@ export default function CardContent() {
                           )}
                         </Box>
                       </Grid>
-                      <Grid item lg={8}>
+                      <Grid item xs={8} sm={8} md={8} lg={8}>
                         <Box>
                           <Skeleton
                             animation="wave"
@@ -133,7 +133,7 @@ export default function CardContent() {
                       </Grid>
                     </Grid>
                   </Grid>
-                  <Grid item lg={6}>
+                  <Grid item xs={6} sm={6} md={6} lg={6}>
                     <Box
                       style={{
                         backgroundColor: "#E9EBF6",
@@ -145,8 +145,9 @@ export default function CardContent() {
                         container
                         justifyContent="center"
                         alignItems="center"
+                        spacing={2}
                       >
-                        <Grid item lg={4}>
+                        <Grid item xs={4} sm={4} md={4} lg={4}>
                           <Skeleton
                             animation="wave"
                             variant="circular"
@@ -154,7 +155,7 @@ export default function CardContent() {
                             height={40}
                           />
                         </Grid>
-                        <Grid item lg={8}>
+                        <Grid item xs={8} sm={8} md={8} lg={8}>
                           {" "}
                           <Box>
                             <Skeleton
@@ -171,7 +172,7 @@ export default function CardContent() {
                             />
                           </Box>
                         </Grid>
-                        <Grid item lg={12}>
+                        <Grid item xs={12} sm={12} md={12} lg={12}>
                           <Typography
                             style={{
                               padding: "5%",

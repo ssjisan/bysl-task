@@ -6,13 +6,24 @@ import {
   Grid,
   Typography,
 } from "@mui/material";
-import React from "react";
+import React, { useState, useEffect } from "react";
 export default function Navbar() {
+  const [show, setShow] = useState(true);
+  const controlAppbar = () => {
+    if (window.scrollY > 100) {
+      setShow(false);
+    } else {
+      setShow(true);
+    }
+  };
+  useEffect(() => {
+    window.addEventListener("scroll", controlAppbar);
+  }, []);
   return (
     <Box>
       <AppBar
-        elevation={0}
-        style={{ backgroundColor: "transparent", color: "#444" }}
+        elevation={show ? 0 : 4}
+        style={{ backgroundColor: show ?"transparent":"white", color: "#444", transition:".5s ease"}}
       >
         <Container style={{ padding: "1.5%" }}>
           <Grid container>

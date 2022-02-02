@@ -7,7 +7,7 @@ export default function Contact() {
   return (
     <Box style={{ marginTop: "150px", backgroundColor: "#B7094C" }}>
       <Container>
-        <Grid container justifyContent="center" alignItems="center">
+        <Grid container>
           <Grid item xs={12} sm={12} md={6} lg={6}>
               <LeftPart/>
           </Grid>

@@ -1,26 +1,61 @@
-import {
-  Avatar,
-  Box,
-  Card,
-  Grid,
-  IconButton,
-  Skeleton,
-  Typography,
-} from "@mui/material";
 import React, { useState } from "react";
-import { FaFacebookF, FaInstagram, FaWhatsapp } from "react-icons/fa";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
 import data from "../../../Assets/fakeData.json";
-export default function CardContent() {
+import "./slick.css"
+import { FaFacebookF, FaInstagram, FaWhatsapp } from "react-icons/fa";
+
+import { Avatar, Box, Card, Grid, Skeleton, Typography } from "@mui/material";
+import Slider from "react-slick";
+export default function CardForMobile() {
   const [userData, setUserData] = useState(data);
+  const [sad, setSad] = useState(0);
+  const handleChange = (i) => {
+    setSad(i);
+  };
+  const settings = {
+    dots: true,
+    autoplay: true,
+    autoplaySpeed: 5000,
+    infinite: true,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    initialSlide: 0,
+    speed: 500,
+    adaptiveHeight: true,
+    customPaging: function (i) {
+      return (
+        <Box
+          style={{
+            width: i === sad ? "50px" : "7px",
+            backgroundColor:
+              (i === 0 && "#FF9E00") ||
+              (i === 1 && "#06D6A0") ||
+              (i === 2 && "#023E8A") ||
+              (i === 3 && "#F72585") ||
+              (i === 4 && "#9D4EDD") ||
+              (i === 5 && "#1E96FC"),
+            height: "4px",
+            borderRadius: "2px",
+            marginTop: "30px",
+            lazyLoad: true,
+          }}
+        ></Box>
+      );
+    },
+  };
   return (
-    <Box style={{marginLeft:"25px"}}>
-      <Grid container spacing={2} justifyContent="center" alignItems="center">
-        {userData.map((data) => (
-          <Grid item sm={6} md={4} lg={4}>
+    <Box>
+      <Slider
+        {...settings}
+        style={{ maxWidth: "98.5%" }}
+        afterChange={(index) => handleChange(index)}
+      >
+        {userData.map((data, i) => (
+          <Box key={i}>
             <Card
               style={{
                 background: " #FFFFFF",
-                boxShadow: "-4px 4px 18px rgba(34, 82, 155, 0.1)",
                 borderRadius: "20px",
                 padding: "5%",
               }}
@@ -191,9 +226,9 @@ export default function CardContent() {
                 </Grid>
               </Box>
             </Card>
-          </Grid>
+          </Box>
         ))}
-      </Grid>
+      </Slider>
     </Box>
   );
 }
